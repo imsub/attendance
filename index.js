@@ -2,10 +2,11 @@ const { Client, GatewayIntentBits ,Collection, REST,Routes, SlashCommandBuilder 
 const dotenv = require('dotenv');
 const moongoose = require("mongoose");
 //const  {generateXLS} = require('./attendanceSheetGenerator.js');
+const credentialAPI = require("./credentials.json");
 const {Attendance} = require("./attendance.modal.js");
 const {spreadSheet} = require("./googleSheet.modal.js");
-const TOKEN = process.env.TOKEN;
-const CLIENT_ID = process.env.CLIENT_ID;
+const TOKEN = credentialAPI.TOKEN;
+const CLIENT_ID = credentialAPI.CLIENT_ID;
 const { google } = require('googleapis');
 const { GoogleSpreadsheet } = require('google-spreadsheet');
 const serviceAccountKeyFile = "./googleSheetAPI.json";
